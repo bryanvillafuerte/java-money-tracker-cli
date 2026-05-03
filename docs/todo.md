@@ -5,7 +5,7 @@
 - [x] 1. Set up the Java project and package structure.
 - [x] 2. Create the transaction domain model.
 - [x] 3. Add transaction categories and transaction types.
-- [ ] 4. Store transactions in memory.
+- [x] 4. Store transactions in memory.
 - [ ] 5. Build CLI commands for adding and listing transactions.
 - [ ] 6. Add filtering by date, type, and category.
 - [ ] 7. Add monthly summary reports.
@@ -19,11 +19,12 @@
 
 ## Current Task
 
-- [ ] Create a repository interface for storing transactions.
-- [ ] Create an in-memory repository implementation.
-- [ ] Add tests for saving and listing transactions.
+- [ ] Create a simple service for adding and listing transactions.
+- [ ] Wire the service to the in-memory repository.
+- [ ] Add service tests.
+- [ ] Start CLI command design for add/list.
 - [ ] Run `mvn test`.
-- [ ] Review the implementation before moving to CLI commands.
+- [ ] Review the implementation before parsing real command-line input.
 
 ## Documentation Tasks
 
