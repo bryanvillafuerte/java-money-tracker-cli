@@ -19,10 +19,12 @@
 
 ## Current Task
 
-- [ ] Create a simple service for adding and listing transactions.
-- [ ] Wire the service to the in-memory repository.
-- [ ] Add service tests.
-- [ ] Start CLI command design for add/list.
+- [x] Create a simple service for adding and listing transactions.
+- [x] Wire the service to the in-memory repository.
+- [x] Add service tests.
+- [x] Add first `list` CLI command.
+- [x] Wire `MoneyTrackerApplication` to the CLI.
+- [ ] Add first `add` CLI command.
 - [ ] Run `mvn test`.
 - [ ] Review the implementation before parsing real command-line input.
 

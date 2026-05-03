@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class InMemoryTransactionRepositoryTest {
 
     @Test
-    void testSaveTransaction() {
+    void saveStoresTransaction() {
         InMemoryTransactionRepository repository = new InMemoryTransactionRepository();
         Transaction transaction = createTransaction();
 

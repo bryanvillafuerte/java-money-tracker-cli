@@ -48,6 +48,6 @@ src/main/java/com/bryanvillafuerte/moneytracker/
 
 ## Current Status
 
-Milestones 1 through 4 are complete. The project builds with Maven, has an initial transaction domain model, and can store transactions in memory through a repository.
+Milestones 1 through 4 are complete. Milestone 5 is in progress. The project builds with Maven, has an initial transaction domain model, can store transactions in memory, and has a first CLI `list` command wired through the application entry point.
 
-Next milestone: build CLI commands for adding and listing transactions.
+Next task: add the first CLI command for creating transactions.
