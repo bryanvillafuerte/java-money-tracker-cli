@@ -4,7 +4,7 @@
 
 - [x] 1. Set up the Java project and package structure.
 - [x] 2. Create the transaction domain model.
-- [ ] 3. Add transaction categories and transaction types.
+- [x] 3. Add transaction categories and transaction types.
 - [ ] 4. Store transactions in memory.
 - [ ] 5. Build CLI commands for adding and listing transactions.
 - [ ] 6. Add filtering by date, type, and category.
@@ -19,12 +19,11 @@
 
 ## Current Task
 
-- [ ] Create `TransactionType` enum.
-- [ ] Create `Category` enum.
-- [ ] Add type and category fields to `Transaction`.
-- [ ] Update `TransactionTest`.
+- [ ] Create a repository interface for storing transactions.
+- [ ] Create an in-memory repository implementation.
+- [ ] Add tests for saving and listing transactions.
 - [ ] Run `mvn test`.
-- [ ] Review the implementation before moving to in-memory storage.
+- [ ] Review the implementation before moving to CLI commands.
 
 ## Documentation Tasks
 

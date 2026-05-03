@@ -48,6 +48,6 @@ src/main/java/com/bryanvillafuerte/moneytracker/
 
 ## Current Status
 
-Milestones 1 and 2 are complete. The project builds with Maven and has an initial `Transaction` domain record with a unit test.
+Milestones 1 through 3 are complete. The project builds with Maven and has an initial transaction domain model with type and category enums.
 
-Next milestone: add transaction type and category enums.
+Next milestone: store transactions in memory.

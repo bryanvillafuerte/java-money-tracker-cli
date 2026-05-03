@@ -8,5 +8,7 @@ public record Transaction(
         UUID id,
         String description,
         BigDecimal amount,
-        LocalDate date
+        LocalDate date,
+        TransactionType type,
+        Category category
 ) {}
