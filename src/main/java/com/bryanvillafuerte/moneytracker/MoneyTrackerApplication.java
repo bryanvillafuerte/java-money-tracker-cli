@@ -6,7 +6,7 @@ import com.bryanvillafuerte.moneytracker.repository.TransactionRepository;
 import com.bryanvillafuerte.moneytracker.service.TransactionService;
 
 public class MoneyTrackerApplication {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         TransactionRepository transactionRepository = new InMemoryTransactionRepository();
         TransactionService transactionService = new TransactionService(transactionRepository);
         MoneyTrackerCli cli = new MoneyTrackerCli(transactionService, System.out);

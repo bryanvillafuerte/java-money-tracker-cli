@@ -2,11 +2,26 @@
 
 ## Current Architecture
 
-The project is currently a plain Java Maven CLI application.
+The project is a layered Java Maven CLI application with dependency injection via constructor wiring.
 
 ```text
-MoneyTrackerApplication
-└── prints startup message
+MoneyTrackerApplication (composition root)
+├── wires dependencies and starts CLI
+│
+├── CLI layer (MoneyTrackerCli)
+│   └── parses commands: list
+│
+├── Service layer (TransactionService)
+│   └── addTransaction, listAllTransactions
+│
+├── Repository layer
+│   ├── TransactionRepository (interface)
+│   └── InMemoryTransactionRepository (ArrayList-backed)
+│
+└── Domain layer
+    ├── Transaction (record: id, description, amount, date, type, category)
+    ├── TransactionType (enum: INCOME, EXPENSE)
+    └── Category (enum: SALARY, FOOD, etc.)
 ```
 
 ## Target Architecture

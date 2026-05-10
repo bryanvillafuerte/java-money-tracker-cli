@@ -6,7 +6,7 @@
 - [x] 2. Create the transaction domain model.
 - [x] 3. Add transaction categories and transaction types.
 - [x] 4. Store transactions in memory.
-- [ ] 5. Build CLI commands for adding and listing transactions.
+- [x] 5. Build CLI commands for adding and listing transactions.
 - [ ] 6. Add filtering by date, type, and category.
 - [ ] 7. Add monthly summary reports.
 - [ ] 8. Add CSV export.
@@ -24,9 +24,11 @@
 - [x] Add service tests.
 - [x] Add first `list` CLI command.
 - [x] Wire `MoneyTrackerApplication` to the CLI.
-- [ ] Add first `add` CLI command.
-- [ ] Run `mvn test`.
-- [ ] Review the implementation before parsing real command-line input.
+- [x] Add `add` CLI command with date, type, and category parsing.
+- [x] Add CLI tests for add and list commands.
+- [x] Run `mvn test` — all 9 tests pass.
+
+**Next:** Milestone 6 — Add filtering by date, type, and category.
 
 ## Documentation Tasks
 

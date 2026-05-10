@@ -1,10 +1,15 @@
 package com.bryanvillafuerte.moneytracker.cli;
 
-import com.bryanvillafuerte.moneytracker.domain.Transaction;
-import com.bryanvillafuerte.moneytracker.service.TransactionService;
-
 import java.io.PrintStream;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
+
+import com.bryanvillafuerte.moneytracker.domain.Category;
+import com.bryanvillafuerte.moneytracker.domain.Transaction;
+import com.bryanvillafuerte.moneytracker.domain.TransactionType;
+import com.bryanvillafuerte.moneytracker.service.TransactionService;
 
 public class MoneyTrackerCli {
 
@@ -19,17 +24,28 @@ public class MoneyTrackerCli {
     public void run(String[] args) {
         if (args.length == 0) {
             out.println("Usage: list");
+            out.println("Usage: add <description> <amount> <date> <type> <category>");
             return;
         }
 
-        String command = args[0];
-
-        if (command.equals("list")) {
-            listTransactions();
-            return;
+        switch (args[0]) {
+            case "add" -> addTransaction(args);
+            case "list" -> listTransactions();
+            default -> out.println("Unknown command: " + args[0]);
         }
+    }
 
-        out.println("Unknown command: " + command);
+    private void addTransaction(String[] args) {
+        out.println("Adding transaction...");
+        transactionService.addTransaction(new Transaction(
+            UUID.randomUUID(),
+            args[1],
+            new BigDecimal(args[2]),
+            LocalDate.parse(args[3]),
+            TransactionType.valueOf(args[4]),
+            Category.valueOf(args[5])
+        ));
+        out.println("Transaction added: " + args[1]);
     }
 
     private void listTransactions() {
