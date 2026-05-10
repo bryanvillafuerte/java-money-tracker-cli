@@ -8,7 +8,7 @@
 - [x] 4. Store transactions in memory.
 - [x] 5. Build CLI commands for adding and listing transactions.
 - [x] 6. Add filtering by date, type, and category.
-- [ ] 7. Add monthly summary reports.
+- [x] 7. Add monthly summary reports.
 - [ ] 8. Add CSV export.
 - [ ] 9. Add JSON export.
 - [ ] 10. Add file import.
@@ -28,7 +28,7 @@
 - [x] Add CLI tests for add and list commands.
 - [x] Run `mvn test` — all 9 tests pass.
 
-**Next:** Milestone 7 — Add monthly summary reports.
+**Next:** Milestone 8 — Add CSV export.
 
 ## Documentation Tasks
 

@@ -34,7 +34,8 @@ class MoneyTrackerCliTest {
         cli.run(new String[]{});
 
         String expectedOutput = "Usage: list [--type TYPE] [--category CATEGORY] [--from DATE] [--to DATE]" + System.lineSeparator() +
-                                "Usage: add <description> <amount> <date> <type> <category>" + System.lineSeparator();
+                                "Usage: add <description> <amount> <date> <type> <category>" + System.lineSeparator() +
+                                "Usage: summary" + System.lineSeparator();
         assertEquals(expectedOutput, output.toString());
     }
 

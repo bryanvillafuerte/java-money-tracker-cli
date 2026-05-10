@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.bryanvillafuerte.moneytracker.domain.Category;
+import com.bryanvillafuerte.moneytracker.domain.MonthlySummary;
 import com.bryanvillafuerte.moneytracker.domain.Transaction;
 import com.bryanvillafuerte.moneytracker.domain.TransactionType;
 import com.bryanvillafuerte.moneytracker.service.TransactionService;
@@ -25,12 +26,14 @@ public class MoneyTrackerCli {
         if (args.length == 0) {
             out.println("Usage: list [--type TYPE] [--category CATEGORY] [--from DATE] [--to DATE]");
             out.println("Usage: add <description> <amount> <date> <type> <category>");
+            out.println("Usage: summary");
             return;
         }
 
         switch (args[0]) {
             case "add" -> addTransaction(args);
             case "list" -> listTransactions(args);
+            case "summary" -> showMonthlySummary();
             default -> out.println("Unknown command: " + args[0]);
         }
     }
@@ -80,5 +83,16 @@ public class MoneyTrackerCli {
             out.println(transaction);
         }
         out.println("Transactions listed.");
+    }
+
+    private void showMonthlySummary() {
+        List<MonthlySummary> monthlySummaries = transactionService.getMonthlySummaries();
+
+        for (MonthlySummary summary : monthlySummaries) {
+            out.println(summary.month() + ":");
+            out.println("  Income: " + summary.totalIncome());
+            out.println("  Expenses: " + summary.totalExpenses());
+            out.println("  Net Balance: " + summary.netBalance());
+        }
     }
 }
